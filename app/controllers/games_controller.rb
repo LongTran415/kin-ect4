@@ -3,8 +3,6 @@ class GamesController < ApplicationController
   before_action :current_user
 
   def index
-    # @current_user = User.first
-
     @categories = Category.all
     @games = Game.all[0..20]
   end

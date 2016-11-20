@@ -1,0 +1,25 @@
+header  {
+  height: 3em;
+  width: 100%;
+  padding: 1em;
+}
+body {
+  width: 100%;
+  @include display(flex);
+  @include flex(12);
+  @include flex-direction(column);
+}
+
+footer {
+  padding: 1em;
+  height: 3em;
+  width: 100%;
+}
+
+.container {
+ margin: 2em auto;
+ width: 75%;
+ padding: 1em 2em 2em 2em;
+ font-family: "Courier New", Courier, monospace;
+ background-color: #D5F7F3;
+}
