@@ -1,9 +1,9 @@
-<br>
+
 <div class="container">
   <div class="header">
     <h1>Welcome to Kinect4</h1>
     <div id="search">
-      <%= form_for "games#search" do |f| %>
+      <%= form_for "games#search", method: "POST" do |f| %>
         <select name="category_id">
           <%= @categories.each do |category| %>
             <option value="<%= category.id %>"><%= category.name %></option>

@@ -1,9 +1,4 @@
 class UsersController < ApplicationController
-  def index
-  end
-
-  def new
-  end
 
   def create
     @user = User.new(user_params)
@@ -19,7 +14,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     current_user.friends << @user
     redirect_to user_path(current_user)
-  end 
+  end
 
   def show
     @user = User.find(params[:id])
@@ -28,11 +23,6 @@ class UsersController < ApplicationController
     @friend = Friendship.where(user_id: current_user.id, friend_id: @user.id)
   end
 
-  def edit
-  end
-
-  def update
-  end
 
   def destroy
     @user = User.find(params[:id])
@@ -41,13 +31,10 @@ class UsersController < ApplicationController
 
     redirect_to user_path(current_user)
   end
-  
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
-
-
-

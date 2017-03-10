@@ -1,7 +1,5 @@
 class VotesController < ApplicationController
-  def index
-  end
-
+  
   def new
     @voate = Vote.new
   end
@@ -12,15 +10,4 @@ class VotesController < ApplicationController
     redirect_to root_path
   end
 
-  def show
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
 end

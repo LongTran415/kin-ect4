@@ -2,6 +2,9 @@ class GamesController < ApplicationController
   before_action :authorize, except: [:index]
   before_action :current_user
 
+  def create
+  end
+  
   def index
     @categories = Category.all
     @games = Game.all[0..20]
