@@ -1,9 +1,9 @@
 
 .wrapper{
     overflow:hidden;
+    z-index: 1;
 }
 section{
-    padding:30px 30px 30px 80px;
     -moz-transition:all 200ms ease-in;
     -webkit-transition:all 200ms ease-in;
     -o-transition:all 200ms ease-in;

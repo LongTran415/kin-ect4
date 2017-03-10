@@ -1,3 +1,5 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "games/show";
 @import "bourbon";
 @import "neat";
@@ -6,3 +8,6 @@
 @import "errors";
 @import "header";
 @import "search";
+@import "project";
+@import "title";
+@import "portfolio";

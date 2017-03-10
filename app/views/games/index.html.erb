@@ -1,24 +1,11 @@
-<section>
-    <article>
-      <div class="container">
-        <div class="header">
-          <h1>Welcome to Kinect4</h1>
-          <div id="search">
-            <%= form_for "games#search", method: "POST" do |f| %>
-              <select name="category_id">
-                <%= @categories.each do |category| %>
-                  <option value="<%= category.id %>"><%= category.name %></option>
-                <% end %>
-                <%= f.submit value: "search"%>
-              </select>
-            <% end %>
-          </div>
-        </div>
-        <br>
+<section class="fill-height-or-more">
+  <div class="title">
+    <%= render partial: "partials/title" %>
+  </div>
 
-        <div class='game-list'>
-            <%= render partial: 'game', collection: @games %>
-        </div>
-      </div>
-    </article>
+  <div class="web-1">
+    <div class="content">
+      <%= render partial: "partials/project" %>
+    </div>
+  </div>
 </section>

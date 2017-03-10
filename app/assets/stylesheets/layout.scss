@@ -1,23 +1,40 @@
 body, html{
     height:100%;
 }
-body{
-    padding:0;
+
+body {
     margin:0;
 }
-h1, p, li{
-    font-family:'helvetica neue', helvetica, arial, sans-serif;
-    color:#222;
-    margin:0 0 1em;
+
+.fill-height-or-more {
+  display: flex;
+  flex-direction: column
 }
-section li{
-    margin:0 0 10px;
+
+.fill-height-or-more > div {
+  /* these are the flex items */
+  flex: 1;
+  height:100vh
 }
-h1{
-    font-size:2.5em;
-    font-weight:300;
+
+.content {
+  height: 100%;
+  font-family: Impact, Charcoal, sans-serif;
 }
-p{
-    font-size:1em;
-    line-height:1.5em;
+
+
+.top {
+  height: 60%;
+  width: 100%;
+  margin: auto;
+
+}
+
+.bottom {
+  height: 40%;
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  color: #FFFFFF;
 }
