@@ -1,19 +1,26 @@
+<div class="wrapper">
 
-<% if current_user %>
-  <div class="header-wrap">
-    <ul class="topnav" id="myTopnav">
-      <li class="nav-link"><%= link_to "Home", games_path %></a></li>
-      <li class="nav-link"><%= link_to "Profile Page", user_path(current_user) %></a></li>
-      <li class="nav-link"><%= link_to "Logout", '/logout' %></a></li>
-    </ul>
+    <input type="checkbox" id="navigation" />
+    <label for="navigation">
+      &#9776;
+    </label>
+    
+    <nav>
+      <% if current_user %>
+        <ul>
+          <li class="nav-link"><%= link_to "Home", games_path %></a></li>
+          <li class="nav-link"><%= link_to "Profile Page", user_path(current_user) %></a></li>
+          <li class="nav-link"><%= link_to "Logout", '/logout' %></a></li>
+        </ul>
 
-  </div>
-<% else %>
-  <div class="header-wrap">
-    <ul class="topnav" id="myTopnav">
-      <li class="nav-link"><%= link_to "Home", games_path %></a></li>
-      <li class="nav-link"><%= link_to 'Login', '/login' %></a></li>
-      <li class="nav-link"><%= link_to 'Signup', '/signup' %></a></li>
-    </ul>
-  </div>
-<% end %>
+      <% else %>
+        <ul class="topnav" id="myTopnav">
+          <li class="nav-link"><%= link_to "Home", games_path %></a></li>
+          <li class="nav-link"><%= link_to 'Login', '/login' %></a></li>
+          <li class="nav-link"><%= link_to 'Signup', '/signup' %></a></li>
+        </ul>
+      <% end %>
+    </nav>
+
+    </div>
+</div>
