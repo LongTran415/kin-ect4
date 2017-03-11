@@ -1,26 +1,21 @@
 
 <div class="grid-items">
-
-<%= link_to image_tag(game.thumbnail_url), game_path(game), class: "grid-item grid-item-image" %>
+  <%= link_to image_tag(game.thumbnail_url), game_path(game), class: "grid-item grid-item-image" %>
   <% if current_user %>
   <% if current_user.games.include?(game) %>
-  <p>
     <%= button_to "+unsubscribe", user_game_subscription_path(current_user, game, game.subscriptions.where(game_id: game.id, user_id: current_user.id)), method: 'delete', action: :destroy, class: "unsubscribe" %>
-  </p>
   <% else %>
   <%# @game = current_user.games.find(game.id) if current_user.games.find(game.id) %>
-  <p>
     <%= button_to "+subscribe", user_game_subscriptions_path(current_user, game, method: :post) %>
-  </p>
   <% end %>
 
   <!-- <%# if game.votes.where(:upvote => false).pluck(:user_id).include?(current_user.id) %><br> -->
-  <% if !game.votes.pluck(:user_id).include?(current_user.id) %><br>
-  <%= button_to '+1', upvote_game_path(game), method: :post %><br>
+  <% if !game.votes.pluck(:user_id).include?(current_user.id) %>
+  <%= button_to '+1', upvote_game_path(game), method: :post %>
   <% end %>
-  <%= pluralize(game.votes.where(upvote: true).count - game.votes.where(upvote: false).count, "vote") %><br>
-  <% if !game.votes.pluck(:user_id).include?(current_user.id) %><br>
-  <%= button_to '-1', downvote_game_path(game), method: :post %><br>
+  <%= pluralize(game.votes.where(upvote: true).count - game.votes.where(upvote: false).count, "vote") %>
+  <% if !game.votes.pluck(:user_id).include?(current_user.id) %>
+  <%= button_to '-1', downvote_game_path(game), method: :post %>
   <% end %>
   <% end %>
 </div>

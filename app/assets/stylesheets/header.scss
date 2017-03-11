@@ -52,7 +52,7 @@ label{
     display:block;
     font-family:'helvetica neue', helvetica, arial, sans-serif;
     font-weight:700;
-    background:#1ea1b8;
+    background: 0 0 0 0;
     width:42px;
     height:42px;
     line-height:42px;
@@ -60,9 +60,9 @@ label{
     text-align:center;
     font-size:2em;
     line-height:1.1em;
-    position:fixed;
+    position:absolute;
     top:10px;
-    left:10px;
+    left:1em;
     -moz-transition:all 200ms ease-in;
     -webkit-transition:all 200ms ease-in;
     -o-transition:all 200ms ease-in;

@@ -1,100 +1,66 @@
-body::-webkit-scrollbar { display: none; }
-
-#slide-window {
-  position:relative;
-  width: 100%;
+.portfolio-new {
+  display: flex;
   height: 100%;
   overflow: hidden;
-  top: 0px;
-  left: 0px;
-}
+  font-family: "Amatic SC";
 
-#slides {
-  height:100%;
-  position:relative;;
-  margin:0px;
-  padding:0px;
-
-  -webkit-transform: translate3d(0px,0px,0px);
-  transform: translate3d(0px,0px,0px);
-
-  transition: all 0.66s ease; -webkit-transition: all 0.66s ease;
-
-}
-
-.slide
-  {
-    $device-background: darken(gray, 40%);
-    $device-backside-background: darken($device-background, 10%);
-    $device-text-color: white;
-    $device-background-top: #162C4C;
-    $device-background-bottom: #0A120D;
-    $gradient-angle: 70deg;
-
-    list-style:none;
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    text-align: center;
-    line-height: 300px;
-    background-size: cover;
-    background-position:50% 50%;
-    color:#fff;
-    -webkit-transform: translate3d(0px,0px,0px);
-    visibility:hidden;
-    -webkit-transform-style: preserve-3d;
-
-    background:
-      linear-gradient($gradient-angle, $device-background-bottom, $device-background-top),
-      no-repeat $device-background-top scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
+  .left {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #A8D4E1, #D7F1F8);
+    padding: 3em 1em;
     overflow: scroll;
-
   }
 
-.alive { visibility:visible; }
+  .right {
+    flex: 1;
+    padding: 2em;
+    background: linear-gradient(to bottom, #E9F6FA,rgba(218, 229, 230, .5));
 
-.nav
-  {
-  position:relative;
-  z-index:9;
-  top:50%;
-  cursor:pointer;
-  color:#fff;
-  opacity:0.7;
-  transition: all 0.66s ease; -webkit-transition: all 0.66s ease;
+
+    h1 {
+      letter-spacing: 1px;
+      color: #0B2433;
+      padding-top: .5em;
+      padding-left: .5em;
+      font-family: "Helvetica";
+      font-size: 3em;
+      text-shadow: 2px 2px #BEC67A;
+    }
+
+    input[type='text'] {
+      height: 2.5em;
+      width: 25em;
+      border: 3px;
+      border-radius: 4px;
+      margin-left: 1em;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #dedede;
+        text-align: center;
+        letter-spacing: .2em;
+        height: 3em;
+      }
+    }
+
+    input[type='submit']{
+      display: flex;
+      margin-left: 1em;
+      font-family: "Amatic SC";
+      background:none;
+      border:none;
+      font-size: 1.5em;
+      color: #F5F39F;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      background: #7A7C6A;
+    }
+    form {
+      display: flex;
+      padding: 1em;
+    }
+
   }
-
-.nav:hover { opacity:1.0; }
-
-#left {
-  left:60px;
-  position: absolute;
-  z-index: 0
-
-}
-#right {
-  right:3%;
-  position: absolute;
-  z-index: 0
-
-}
-
-#credit
-  {
-  position:absolute;
-  top:25px;
-  left:25px;
-  color:#eaeaea;
-  font-family: 'Courier New', Courier, monospace;
+  .spring {
+    flex: 1;
   }
-
-.slide-1, .slide-2, .slide-3, .slide-4 {
-  max-width: 65%;
-  margin: 6em 0 -6em 0;
 }

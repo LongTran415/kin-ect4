@@ -1,0 +1,26 @@
+.navicon {
+  color: black;
+  background-color: (255 0 0 0);
+  text-decoration: none;
+  padding: 0;
+}
+.top-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-items {
+  display: flex;
+  flex-direction: column;
+
+  .game-list {
+    flex: 1;
+    padding: 1em;
+    margin-top: 20em;
+
+  }
+}
+.grid-items:hover {
+  background: #EFF0CD;
+  padding: 1em;
+}
