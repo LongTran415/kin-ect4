@@ -7,7 +7,7 @@
   .left {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #A8D4E1, #D7F1F8);
+    background: linear-gradient(#E7FEFA, #F2FFFD, hsla(255, 0, 0, 0));
     padding: 3em 1em;
     overflow: scroll;
   }
@@ -15,7 +15,8 @@
   .right {
     flex: 1;
     padding: 2em;
-    background: linear-gradient(to bottom, #E9F6FA,rgba(218, 229, 230, .5));
+    background: linear-gradient(#F2FFFD, hsla(255, 0, 0, 0));
+
 
 
     h1 {
