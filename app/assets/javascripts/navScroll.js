@@ -5,7 +5,7 @@ $(window).scroll(function () {
     var currentScroll = $(this).scrollTop();
     if (currentScroll > headerOrgOffset) {
         if (currentScroll > previousScroll) {
-            $('.header-wrap').fadeOut();
+            $('.header-wrap').fadeIn();
         } else {
             $('.header-wrap').fadeIn();
         }
@@ -14,12 +14,3 @@ $(window).scroll(function () {
     }
     previousScroll = currentScroll;
 });
-
-function dropMenu() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}

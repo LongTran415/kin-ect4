@@ -3,22 +3,31 @@
   <!-- left -->
   <div class='left'>
     <div class='game-list'>
-        <%= render partial: 'game', collection: @games %>
+      <h3>Browse Games</h3>
+      <% if @all_games.present? %>
+        <%= render @all_games %>
+      <% else %>
+        <p>Sorry Error</p>
+      <% end %>
     </div>
   </div>
 
   <!-- right -->
   <div class='right'>
-    <h1>Find a Game</h1>
 
-    <div id="search">
-      <%= form_for "games#search", method: "POST" do |f| %>
-        <select name="category_id">
-          <%= @categories.each do |category| %>
-            <option value="<%= category.id %>"><%= category.name %></option>
-          <% end %>
-          <%= f.submit value: "search"%>
-        </select>
+    <div class="game-top">
+      <h1 class="start">Find a Game</h1>
+      <%= form_tag(games_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
+        <%= submit_tag "Search" %>
+      <% end %>
+    </div>
+
+    <div class="game-bot">
+      <% if @games.present? %>
+        <%= render @games %>
+      <% else %>
+        <p>There are no games containing the term(s) <%= params[:search] %>.</p>
       <% end %>
     </div>
   </div>

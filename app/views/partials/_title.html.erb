@@ -1,8 +1,9 @@
 <div class="title-container">
-
+  <div class="bg-image">
+    <%= image_tag "/images/games.png" %>
+  </div>
   <div class="top-div">
-    <h1>Welcome to Kin-ect</h1>
-    <%= image_tag "/images/start.png", class: "start-button animated infinite flash"%>
+    <%= image_tag "/images/start.png", onclick:"handleWebClick();", class: "start-button start animated infinite flash"%>
   </div>
 
   <div class="bottom-div">

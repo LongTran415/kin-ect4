@@ -4,10 +4,15 @@ class GamesController < ApplicationController
 
   def create
   end
-  
+
   def index
     @categories = Category.all
-    @games = Game.all[0..20]
+    @all_games = Game.all[0..20]
+    if params[:search]
+      @games = Game.search(params[:search]).order("created_at DESC")
+    else
+      @games = Game.all.order('created_at DESC')[0..20]
+    end
   end
 
   def show

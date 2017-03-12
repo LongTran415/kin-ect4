@@ -4,11 +4,12 @@ body, html{
 
 body {
     margin:0;
+    overflow: hidden;
 }
 
 .fill-height-or-more {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .fill-height-or-more > div {
