@@ -1,40 +1,5 @@
-<!-- <h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p> -->
-<div class="container">
-
-
-	<% if current_user == @user %>
-	<h2>Welcome <%= @user.name.capitalize %>, here are your Games!</h2>
-	<% else %>
-	<h2><%= @user.name.capitalize %>'s Profile Page!</h2>
-	<% end %>
-	<br>
-	<% if current_user == @user %>
-	<%= render 'add_games_button' %>
-	<% end %>
-	<br>
-	<br>
-	<%if current_user.friends.include?(@user) %>
-	<!-- Unfriend Button -->
-
-	<%= button_to "Unfriend", { action: "destroy", id: @user.id }, method: :delete, data: { confirm: "Are you sure?" } %>
-
-	<% else %>
-	<!-- Add Friend Button -->
-	<% if current_user.id == @user.id %>
-	<% else %>
-	<%= button_to "Add Friend", action: "friendship" %>
-	<% end %>
-
-	<% end %>
-
-	<ul>
-		<%= render partial: 'games/game', collection: @games %>
-	</ul>
-
-	<h2>Friends!</h2>
-	<ul>
-		<%= render partial: 'friend', collection: @friends %>
-	</ul>
-
-</div>
+<section class="fill-height-or-more">
+  <div class="title">
+    <%= render partial: "partials/users_show" %>
+  </div>
+</section

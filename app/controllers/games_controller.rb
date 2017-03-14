@@ -7,11 +7,11 @@ class GamesController < ApplicationController
 
   def index
     @categories = Category.all
-    @all_games = Game.all[0..20]
+    @all_games = Game.all[0..10]
     if params[:search]
       @games = Game.search(params[:search]).order("created_at DESC")
     else
-      @games = Game.all.order('created_at DESC')[0..20]
+      @games = Game.all.order('created_at DESC')[0..5]
     end
   end
 

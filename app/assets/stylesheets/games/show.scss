@@ -4,12 +4,39 @@
   text-decoration: none;
   padding: 0;
 }
+.bottom-div {
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#BCFFF4, #F2FFFD);
+    padding: 3em 1em;
+    overflow: auto;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2em;
+    background: #F2FFFD;
+    overflow: auto;
+  }
+}
+
 .top-div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
+  .bg-image {
+    max-width: 100%;
+    margin-top: -4em;
+  }
+  .start-button {
+    margin-top: 1em;
+  }
   h1 {
     font-family: "Rubik Mono One";
     border-color: black;
@@ -40,9 +67,4 @@
 .grid-items:hover {
   background: #EFF0CD;
   padding: 1em;
-}
-.bg-image {
-  position: absolute;
-  margin-left: 25%;
-  margin-top: 6em;
 }
