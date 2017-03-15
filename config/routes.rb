@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # games/results
 
-  resources :games, only: [:index, :show] do
+  resources :games, only: [:index, :show, :create] do
     resources :comments do
       resources :votes, except: [:index, :destroy]
     end

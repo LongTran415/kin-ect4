@@ -1,9 +1,12 @@
 class CategoriesController < ApplicationController
-	before_action :authorize
-	
-  def index
+
+  def new
+    @category = Category.find(params[:id])
   end
 
-  def show
+  def create
+    @category = Category.create(name: params[:name])
+    redirect_to root_path
   end
+
 end

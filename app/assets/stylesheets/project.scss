@@ -1,0 +1,83 @@
+.portfolio-new {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#E7FEFA, #F2FFFD, hsla(255, 0, 0, 0));
+    padding: 3em 1em;
+    overflow: auto;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2em;
+    background: linear-gradient(#F2FFFD, hsla(255, 0, 0, 0));
+    overflow: auto;
+
+    h1 {
+      margin-top: 1em;
+      color: #0B2433;
+      padding-top: .5em;
+      padding-left: .5em;
+      font-size: 3em;
+      text-shadow: 2px 2px #BEC67A;
+      font-family: "Press Start 2P";
+
+    }
+
+    input[type='text'] {
+      height: 2.5em;
+      width: 25em;
+      border: 3px;
+      border-radius: 4px;
+      margin-left: 1em;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #dedede;
+        text-align: center;
+        letter-spacing: .2em;
+        height: 3em;
+      }
+    }
+
+    input[type='submit']{
+      font-family: "Open Sans";
+      display: flex;
+      margin-left: 1em;
+      background:none;
+      border:none;
+      font-size: 1em;
+      color: #F5F39F;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0);
+      background: #7A7C6A;
+    }
+    form {
+      display: flex;
+      padding: 1em;
+    }
+    .game-top {
+      flex: 1;
+    }
+    .game-bot {
+      display:flex;
+      flex: 6;
+      background: #D9ECE9;
+      flex-wrap: wrap;
+      font-family: "Open Sans";
+      justify-content: space-around;
+      border-radius: 2em;
+      padding: 1em;
+      .grid-items {
+
+      }
+    }
+  }
+  .spring {
+    flex: 1;
+  }
+}

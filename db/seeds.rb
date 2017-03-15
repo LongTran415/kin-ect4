@@ -14,21 +14,10 @@ categories_arry = ["Card Games", "Strategy", "Classic", "Puzzle", "Adventure", "
 categories_arry.map! do |game|
   Category.create!(:name => game )
 end
-#
-# 10.times.map do |i|
-#   Game.create!(body: Faker::Lorem.paragraph,
-# 				       title: Faker::Lorem.sentence,
-#                num_players: rand(4),
-#                category_id: categories_arry.sample.id)
-# end
 
-
-
-# Boardgame.all[0].destroy
 json = JSON.parse(File.read('bgg_collection_seed.json'))
 
 json.each do |game|
-  # p game['name']
   @game = Game.new
   @game[:title] = game['name'] if game['name'] != nil
   @game[:body] = Faker::Lorem.paragraph
@@ -39,5 +28,4 @@ json.each do |game|
   @game[:playing_time] = game['playingTime'] if game['playingTime'] != nil
   @game[:category_id] = categories_arry.sample.id
   @game.save
-  # Game.create!(game[:name])
 end

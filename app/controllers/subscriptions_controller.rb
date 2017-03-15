@@ -16,7 +16,4 @@ class SubscriptionsController < ApplicationController
     @sub[0].destroy
     redirect_to root_path
   end
-
-
-
 end

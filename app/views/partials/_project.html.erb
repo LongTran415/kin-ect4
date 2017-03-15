@@ -1,0 +1,35 @@
+<div class='portfolio-new'>
+
+  <!-- left -->
+  <div class='left'>
+    <div class='game-list'>
+      <h3>Browse Games</h3>
+      <% if @all_games.present? %>
+        <%= render @all_games %>
+      <% else %>
+        <p>Sorry Error</p>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- right -->
+  <div class='right'>
+
+    <div class="game-top">
+      <h1 class="start">Find a Game</h1>
+      <%= form_tag(games_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
+        <%= submit_tag "Search" %>
+      <% end %>
+    </div>
+
+    <div class="game-bot">
+      <% if @games.present? %>
+        <%= render @games %>
+      <% else %>
+        <p>There are no games containing the term(s) <%= params[:search] %>.</p>
+      <% end %>
+    </div>
+  </div>
+
+</div>
