@@ -1,0 +1,35 @@
+<div class="user-show-container">
+  <div class="show-top-div">
+
+    <div class="left">
+      <h2>Friends!</h2>
+        <%= render partial: 'friend', collection: @friends %>
+
+        <%if current_user.friends.include?(@user) %>
+
+        <%= button_to "Unfriend", { action: "destroy", id: @user.id }, method: :delete, data: { confirm: "Are you sure?" } %>
+
+        <% else %>
+
+        <!-- Add Friend Button -->
+        <% unless current_user.id == @user.id %>
+            <%= button_to "Add Friend", action: "friendship" %>
+        <% end %>
+      <% end %>
+
+    </div>
+    <div class="right">
+
+      <h1>Welcome [<%= @user.name.capitalize %>]</h1>
+        <% if current_user == @user %>
+          <h2>Here are your games <%= @user.name.capitalize %>!</h2>
+        <% end %>
+        <% if current_user == @user %>
+          <%= link_to "Add Games", games_path %>
+        <% end %>
+        <div class="user-games">
+          <%= render partial: 'games/game', collection: @games %>
+        </div>
+    </div>
+  </div>
+</div>

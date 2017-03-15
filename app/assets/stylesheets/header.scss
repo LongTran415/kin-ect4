@@ -1,0 +1,30 @@
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#nav ul {
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+#nav ul li {
+  display: inline;
+  text-transform: uppercase;
+  padding: 0 10px;
+  letter-spacing: 10px;
+
+}
+#nav ul li a {
+  text-decoration: none;
+  color: #eee;
+
+}
+#nav ul li a:hover {
+  text-decoration: underline;
+
+}

@@ -1,5 +1,0 @@
-<% if current_user %>
-<%= link_to "Home", games_path %> | <%= link_to "Profile Page", user_path(current_user) %> | <%= link_to "Logout", '/logout' %>
-<% else %>
-<%= link_to "Home", games_path %> | <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
