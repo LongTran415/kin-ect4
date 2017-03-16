@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+
 }
 
 #nav ul {
@@ -10,6 +11,10 @@
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: 10px 0;
+  text-shadow: 4px 4px 6px #275767;
+  font-family: "Press Start 2P";
+  background: #012127; opacity: .7;
+
 }
 
 #nav ul li {
