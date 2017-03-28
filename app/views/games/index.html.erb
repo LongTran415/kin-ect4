@@ -12,7 +12,35 @@
   </div>
 
   <div class="index-bot">
-    <h4 class="animated infinite flash">(press start)</h4>
+    <h4><%= link_to "(press start)", root_path, class: "start-button animated infinite flash", onclick:"handleWebClick();"%></h4>
+  </div>
+
+</div>
+<div class="index-container">
+  <div class="index-top">
+  <!-- left -->
+   <div class='section-top'>
+
+     <div class="game-top">
+       <h1 class="start">Find a Game</h1>
+       <%= form_tag(games_path, :method => "get", id: "search-form") do %>
+         <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
+         <%= submit_tag "Search", class: "search-button" %>
+       <% end %>
+     </div>
+
+   </div>
+
+   <!-- right -->
+   <div class='section-bot'>
+     <div class='game-list'>
+       <h3>Browse Games</h3>
+       <% if @all_games.present? %>
+         <%= render @all_games %>
+       <% else %>
+         <p>Sorry Error</p>
+       <% end %>
+     </div>
   </div>
 
 </div>
