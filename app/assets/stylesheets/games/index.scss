@@ -1,0 +1,113 @@
+.index-container {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .section {
+    height: 100%;
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+
+    .games-index-header {
+      display:flex;
+      font-size: 1.5em;
+      color: #eee;
+      margin-bottom: 14em;
+      text-shadow: 4px 4px 6px #275767;
+      font-family: "Press Start 2P";
+      padding-top: 1em;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin-top: -4em;
+        opacity: .9;
+        z-index: 0;
+      }
+
+      h1{
+        margin-top: 2em;
+        transform:scale(1, 2);
+        letter-spacing: .1em;
+        color: #F7F26D;
+        opacity: .9;
+
+      }
+    }
+  }
+
+  .index-top {
+    width: 100%;
+    height: 100%;
+    flex: 4;
+    background: linear-gradient(#E2F5F8, #76B6C0);
+    display: flex;
+    flex-direction: column;
+
+    .section-top {
+      flex-direction: column;
+      background: linear-gradient(#BCFFF4, #F2FFFD);
+      padding: 3em 1em;
+      overflow: auto;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-family: "Press Start 2P";
+
+      &.game-top {
+      }
+    }
+
+    .section-bot {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 2em;
+      background: #F2FFFD;
+      overflow: auto;
+
+      .user-games {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .index-bot {
+    display: flex;
+    flex: 1;
+    background: #E2F5F8;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+      text-shadow: 2px 2px 4px #888888;
+      font-family: "Press Start 2P";
+      padding-top: 2em;
+      font-size: 1.5em;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:visited {
+      color: black;
+    }
+  }
+
+}
