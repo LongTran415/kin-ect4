@@ -1,12 +1,37 @@
+.slides-window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+}
+
+.slide {
+  list-style: none;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+
 #slides {
   height: 100%;
   position: absolute;
   margin: 0px;
   padding: 0px;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
   transition: all 0.66s ease;
-  -webkit-transition: all 0.66s ease;
 
   .slide-0 {
     background: -moz-linear-gradient(45deg, rgba(156,255,250,1) 0%, rgba(27,4,110,1) 100%); /* ff3.6+ */
