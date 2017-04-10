@@ -5,12 +5,12 @@ class Game < ApplicationRecord
   has_many :votes, as: :votable
 
   belongs_to :category
-
+  
   def self.search(search)
     if search
-      self.where("name like ?", "%#{search}%")
+      where('name LIKE ?', "%#{search}%")
     else
-      self.all
+      scope :games, -> { where(title: "%#{search}%") }
     end
   end
 end
