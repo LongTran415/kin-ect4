@@ -1,6 +1,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "games/show";
+@import "games/slides";
+@import "games/search";
 @import "bourbon";
 @import "neat";
 @import "comments";
@@ -14,3 +16,5 @@
 @import "flash";
 @import "scroll";
 @import "users/show";
+@import "login";
+@import "grid-items";

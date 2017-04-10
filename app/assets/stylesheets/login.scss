@@ -1,0 +1,45 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(hsla(255, 0, 0, 0), #E7FEFA, #F2FFFD);
+  .top-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    .login-form {
+      padding: 2em;
+      margin-bottom: 4em;
+      font-family: "Cutive Mono";
+
+      input[type=text], input[type=password] {
+        border-radius: 2em;
+        height: 2em;
+        border: none;
+        font-family: "Cutive Mono";
+      }
+      .login-btn {
+        background: #48667a;
+         -webkit-border-radius: 12;
+         -moz-border-radius: 12;
+         border-radius: 12px;
+         font-family: "Cutive Mono";
+         color: #ffffff;
+         font-size: 1em;
+         text-decoration: none;
+      }
+      .login-btn:hover {
+         background: #3cb0fd;
+         background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+         background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+         background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+         background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+         background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+         text-decoration: none;
+      }
+    }
+  }
+}

@@ -4,9 +4,9 @@ $(document).ready(function() {
 });
 
 function handleWebClick(evt){
-  evt.preventDefault();
 
   $(".start").click(function() {
+
     var topPosition = $(".content").position().top;
     $("body").animate({ scrollTop: topPosition }, "slow");
 

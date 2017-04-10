@@ -1,35 +1,43 @@
 <div class='portfolio-new'>
-
-  <!-- left -->
-  <div class='left'>
-    <div class='game-list'>
-      <h3>Browse Games</h3>
-      <% if @all_games.present? %>
-        <%= render @all_games %>
-      <% else %>
-        <p>Sorry Error</p>
-      <% end %>
-    </div>
+  <div class="opaque">
   </div>
+    <div class="games-search-form">
+      <div class="search-window">
+        <ol id="slides" start="1">
+          <li class="slide slide-0">
+            <div class="top-slide">
+              <h1>Search</h1>
+              <div class="search-form">
+                <%= form_tag games_path, :method => 'get', :id => "games_search" do %>
+                  <%= text_field_tag :search, params[:search] %>
+                  <%= submit_tag "Search", class: "search-button", :name => nil %>
 
-  <!-- right -->
-  <div class='right'>
+              <% end %>
+              </div>
+            </div>
+            <div class="btm-slide">
+              <div class="search-results">
+                <div id="games"><%= render 'partials/games' %></div>
 
-    <div class="game-top">
-      <h1 class="start">Find a Game</h1>
-      <%= form_tag(games_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
-        <%= submit_tag "Search" %>
-      <% end %>
+              </div>
+            </div>
+          </li>
+
+          <li class="slide slide-1">
+            <div class="top-slide">
+              <h1>Browse</h1>
+            </div>
+            <div class="btm-slide">
+              <%= render partial: 'game', collection: @games %>
+            </div>
+          </li>
+
+
+        </ol>
+        <div id="credit">Page No.<span id="count">1</span></div>
+      </div>
     </div>
-
-    <div class="game-bot">
-      <% if @games.present? %>
-        <%= render @games %>
-      <% else %>
-        <p>There are no games containing the term(s) <%= params[:search] %>.</p>
-      <% end %>
-    </div>
-  </div>
+    <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
 
 </div>

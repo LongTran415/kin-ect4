@@ -1,3 +1,4 @@
+
 $.global = new Object();
 
 $.global.item = 1;

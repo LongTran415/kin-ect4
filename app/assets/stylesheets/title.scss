@@ -1,9 +1,18 @@
-
-
 .title-container {
   height: 100%;
   background: linear-gradient(hsla(255, 0, 0, 0), #E7FEFA, #F2FFFD);
-
+  background-image: url("/images/games.jpeg");
+  background-size: cover;
+   h4 {
+     font-size: 3em;
+     font-family: "Press Start 2P";
+     color: darkgrey;
+     margin-top: 4em;
+   }
+   h4:hover {
+     color: white;
+     cursor: pointer;
+   }
 }
 .top-div {
   height: 100%;

@@ -54,18 +54,3 @@
   }
 
 }
-.grid-items {
-  display: flex;
-  flex-direction: column;
-
-  .game-list {
-    flex: 1;
-    padding: 1em;
-    margin-top: 20em;
-
-  }
-}
-.grid-items:hover {
-  background: #EFF0CD;
-  padding: 1em;
-}

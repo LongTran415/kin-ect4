@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'neat'
+gem "neat"
 gem "bourbon"
 gem "bitters"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'will_paginate', '~> 3.1.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
