@@ -6,6 +6,8 @@ class GamesController < ApplicationController
   end
 
   def index
+    @games = Game.search(params[:search])
+
     @categories = Category.all
     @all_games = Game.all[0..10]
     if params[:search]

@@ -7,6 +7,10 @@ class Game < ApplicationRecord
   belongs_to :category
 
   def self.search(search)
-    where("title LIKE ?", "%#{search}%")
+    if search
+      self.where("name like ?", "%#{search}%")
+    else
+      self.all
+    end
   end
 end

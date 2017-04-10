@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'neat'
+gem "neat"
 gem "bourbon"
 gem "bitters"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
