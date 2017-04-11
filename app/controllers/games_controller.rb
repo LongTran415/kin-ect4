@@ -6,16 +6,25 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all[0..10]
+    case sort_column
+    when "votes"
+      @games =  Game.left_joins(:votes).group(:id).order("COUNT(games.id) #{sort_direction}").limit(20)
+    when "category"
+      @games = Game.reorder("categories.name #{sort_direction}").includes(:category).limit(20)
+    else
+      @games = Game.reorder("title " + sort_direction).limit(20)  # This works for the game title
+    end
+    @games = Game.paginate(:per_page => 5, :page => params[:page])
+
   end
 
   def show
     @game = Game.find(params[:id])
+    @game_category = @game.category
     @players = @game.users
   end
 
   def search
-
     @categories = Category.all
     @games = Game.where(category_id: params[:category_id])
     render :index
@@ -37,10 +46,10 @@ class GamesController < ApplicationController
 private
 
  def sort_column
-  params[:sort] || "name"
+  params[:sort] || "title"
  end
 
  def sort_direction
-  params[:direction] || "asc"
+   params[:direction] || "asc"
  end
 end

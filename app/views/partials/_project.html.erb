@@ -11,7 +11,9 @@
               <%= render partial: 'partials/search' %>
             </div>
             <div class="btm-slide">
+              <%= will_paginate @games %>
               <div class="search-results">
+
                 <div id="games"><%= render partial: 'partials/games'%></div>
               </div>
             </div>

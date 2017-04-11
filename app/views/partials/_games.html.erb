@@ -1,9 +1,10 @@
+
 <div class="table-items">
   <table>
     <tr>
-      <th><%= link_to "Title", sort: "title" %></th>
-      <th><%= link_to "Category", sort: "category" %></th>
-      <th><%= link_to "Votes", sort: "votes" %></th>
+      <th><%= sortable "title", "Title" %></th>
+      <th><%= sortable "category", "Category" %></th>
+      <th><%= sortable "votes", "Votes" %></th>
     </tr>
     <% for game in @games %>
       <tr>

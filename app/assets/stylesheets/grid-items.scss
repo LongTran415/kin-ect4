@@ -1,5 +1,4 @@
 .top-slide {
-  background: pink;
   display: flex;
   text-align: justify;
   align-content: center;
@@ -14,12 +13,11 @@
     padding-left: 2em;
   }
   input[type="text"]{
-    margin-top: 9em;
+    margin-top: 9.5em;
   }
 }
 
 .btm-slide {
-  background: black;
   display: flex;
   flex-direction: column;
   font-family: "Cutive Mono";
