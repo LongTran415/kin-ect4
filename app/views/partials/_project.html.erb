@@ -1,24 +1,20 @@
 <div class='portfolio-new'>
   <div class="opaque">
   </div>
-    <div class="games-search-form">
-      <div class="search-window">
+
+    <div class="games-search-view">
+      <div class="slides-window">
         <ol id="slides" start="1">
           <li class="slide slide-0">
             <div class="top-slide">
               <h1>Search</h1>
-              <div class="search-form">
-                <%= form_tag games_path, :method => 'get', :id => "games_search" do %>
-                  <%= text_field_tag :search, params[:search] %>
-                  <%= submit_tag "Search", class: "search-button", :name => nil %>
-
-              <% end %>
-              </div>
+              <%= render partial: 'partials/search' %>
             </div>
             <div class="btm-slide">
+              <%= will_paginate @games %>
               <div class="search-results">
-                <div id="games"><%= render 'partials/games' %></div>
 
+                <div id="games"><%= render partial: 'partials/games'%></div>
               </div>
             </div>
           </li>
@@ -37,6 +33,7 @@
         <div id="credit">Page No.<span id="count">1</span></div>
       </div>
     </div>
+
     <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
     <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
 

@@ -5,7 +5,9 @@ class Game < ApplicationRecord
   has_many :votes, as: :votable
 
   belongs_to :category
-  
+
+  delegate :name, to: :category, prefix: true, allow_nil: true
+
   def self.search(search)
     if search
       where('name LIKE ?', "%#{search}%")

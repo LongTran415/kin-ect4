@@ -1,42 +1,3 @@
-
-
-.search-window {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  top: 0px;
-  left: 0px;
-}
-
-
-
-.slide {
-  list-style: none;
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 100%;
-  background: #ccc;
-  text-align: center;
-  background-size: cover;
-  background-position: 50% 50%;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  .top-slide {
-    flex: 1;
-    width: 70%
-  }
-  .btm-slide {
-    flex: 2;
-    width: 70%
-  }
-}
-
 .alive {
   visibility: visible;
 }
@@ -47,7 +8,7 @@
   top: 50%;
   cursor: pointer;
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.9;
   transition: all 0.66s ease;
   -webkit-transition: all 0.66s ease;
 }

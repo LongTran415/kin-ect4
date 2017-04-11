@@ -1,3 +1,38 @@
-<%= hidden_field_tag :direction, params[:direction] %>
-<%= hidden_field_tag :sort, params[:sort] %>
-<%= will_paginate @products %>
+
+<div class="table-items">
+  <table>
+    <tr>
+      <th></th>
+      <th><%= sortable "title", "Title" %></th>
+      <th><%= sortable "category", "Category" %></th>
+      <th><%= sortable "votes", "Votes" %></th>
+    </tr>
+    <% for game in @games %>
+      <tr>
+        <td>
+          <%= link_to image_tag(game.thumbnail_url), game_path(game) %>
+          <% if current_user %>
+          <% if current_user.games.include?(game) %>
+            <%= button_to "+unsubscribe", user_game_subscription_path(current_user, game, game.subscriptions.where(game_id: game.id, user_id: current_user.id)), method: 'delete', action: :destroy, class: "unsubscribe" %>
+          <% else %>
+          <%# @game = current_user.games.find(game.id) if current_user.games.find(game.id) %>
+            <%= button_to "+subscribe", user_game_subscriptions_path(current_user, game, method: :post) %>
+          <% end %>
+
+          <!-- <%# if game.votes.where(:upvote => false).pluck(:user_id).include?(current_user.id) %><br> -->
+          <% if !game.votes.pluck(:user_id).include?(current_user.id) %>
+          <%= button_to '+1', upvote_game_path(game), method: :post %>
+          <% end %>
+          <%= pluralize(game.votes.where(upvote: true).count - game.votes.where(upvote: false).count, "vote") %>
+          <% if !game.votes.pluck(:user_id).include?(current_user.id) %>
+          <%= button_to '-1', downvote_game_path(game), method: :post %>
+          <% end %>
+          <% end %>
+        </td>
+        <td><%= game.title %></td>
+        <td><%= game.category.name %></td>
+        <td><%= game.votes.length %></td>
+      </tr>
+      <% end %>
+  </table>
+</div>
