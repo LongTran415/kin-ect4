@@ -4,7 +4,7 @@ body, html{
 
 body {
   margin:0;
-  overflow: auto;
+  overflow: hidden;
 }
 
 
@@ -16,7 +16,7 @@ body {
 .fill-height-or-more > div {
   /* these are the flex items */
   flex: 1;
-  height:100vh
+  height:100vh;
 }
 
 .content {

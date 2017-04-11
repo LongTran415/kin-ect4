@@ -14,7 +14,7 @@ class GamesController < ApplicationController
     else
       @games = Game.reorder("title " + sort_direction).limit(20)  # This works for the game title
     end
-    @games = Game.paginate(:per_page => 5, :page => params[:page])
+    @games = Game.paginate(:per_page => 20, :page => params[:page])
 
   end
 
@@ -50,6 +50,6 @@ private
  end
 
  def sort_direction
-   params[:direction] || "asc"
+   %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
  end
 end

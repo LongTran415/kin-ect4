@@ -16,17 +16,30 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background: #094356; opacity: .3;
+    background: #094356; opacity: .6;
   }
 
 }
 
 table, td, th {
-  border: 1px solid white;
+
+  td {
+    padding: 1em;
+    border-top: .1em solid;
+    color: white;
+  }
+  li {
+    color: white;
+  }
+  li:visited {
+    color: white;
+  }
 }
+
 
 .table-items {
   width: 100%;
+  color: white;
 
   table {
     display: flex;
@@ -34,11 +47,45 @@ table, td, th {
     border-collapse: collapse;
     width: 100%;
     justify-content: left;
+    color: white;
+    font-size: 1em;
+
+
+    input[type="submit"] {
+      font-family: "Cutive Mono";
+      background: #176e81;
+      border-radius: .5em;
+      margin-top: 1em;
+      border: none;
+      color: white;
+      font-size: 1em;
+    }
+    input[type="submit"]:hover {
+      background: black;
+      opacity: .7;
+    }
+
+    img:hover {
+      opacity: .7;
+
+    }
+
+    li {
+      color: white;
+    }
+    li:visited {
+      color: white;
+    }
+
   }
   th {
     width: 100%;
     height: 5em;
     text-align: left;
+    padding: 1em;
+    a {
+      color: white;
+    }
   }
 
   th .asc {
@@ -57,4 +104,11 @@ table, td, th {
     background-position: right center;
   }
 
+}
+.pagination {
+  color: white;
+  margin-bottom: -2em;
+  span, a {
+    color: white
+  }
 }
