@@ -1,3 +1,16 @@
-<%= will_paginate @games %>
-<%= hidden_field_tag :direction, params[:direction] %>
-<%= hidden_field_tag :sort, params[:sort] %>
+<div class="table-items">
+  <table>
+    <tr>
+      <th><%= link_to "Title", sort: "title" %></th>
+      <th><%= link_to "Category", sort: "category" %></th>
+      <th><%= link_to "Votes", sort: "votes" %></th>
+    </tr>
+    <% for game in @games %>
+      <tr>
+        <td><img src=<%= game.thumbnail_url %>> <%= game.title %></td>
+        <td><%= game.category.name %></td>
+        <td><%= game.votes.length %></td>
+      </tr>
+      <% end %>
+  </table>
+</div>

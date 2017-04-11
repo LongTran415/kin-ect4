@@ -6,8 +6,7 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all
-    @games = Game.paginate(:per_page => 5, :page => params[:page])
+    @games = Game.all[0..10]
   end
 
   def show
@@ -16,7 +15,6 @@ class GamesController < ApplicationController
   end
 
   def search
-    @games = Game.search(params[:search]).order("created_at DESC")
 
     @categories = Category.all
     @games = Game.where(category_id: params[:category_id])
@@ -36,13 +34,13 @@ class GamesController < ApplicationController
     redirect_to(games_path)
   end
 
-  private
+private
 
  def sort_column
-   Game.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  params[:sort] || "name"
  end
 
  def sort_direction
-   %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  params[:direction] || "asc"
  end
 end

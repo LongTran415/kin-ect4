@@ -18,4 +18,27 @@
     position: absolute;
     background: #094356; opacity: .3;
   }
+
+}
+
+table, td, th {
+  border: 1px solid white;
+}
+
+.table-items {
+  width: 100%;
+
+  table {
+    display: flex;
+    margin-top: 1em;
+    border-collapse: collapse;
+    width: 100%;
+    justify-content: left;
+  }
+  th {
+    width: 100%;
+    height: 5em;
+    text-align: left;
+  }
+
 }
