@@ -94,10 +94,12 @@ input[type="checkbox"]:checked ~ section {
 
 .header-wrap {
   position: fixed;
+  display: flex;
+  align-items: center;
 
   .menu {
     max-width: 12%;
-    margin-left: -5em;
+    margin-top: 1em;
   }
 }
 

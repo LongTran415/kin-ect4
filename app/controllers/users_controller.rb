@@ -19,9 +19,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     current_user.friends << @user
     redirect_to user_path(current_user)
-  end 
+  end
 
   def show
+    @users = User.all
     @user = User.find(params[:id])
     @games = @user.games
     @friends = @user.friends
@@ -41,13 +42,10 @@ class UsersController < ApplicationController
 
     redirect_to user_path(current_user)
   end
-  
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
-
-
-
