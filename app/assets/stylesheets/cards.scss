@@ -38,7 +38,7 @@
 
     @media all and (max-width: 959px) and (min-width: 600px) {
       h1 {
-        font-size: 6vw;
+        font-size: 5.5vw;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -74,7 +74,7 @@
     background: rgba(64,64,64,0.6);
     margin-right: 1em;
     position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 
 
     a {
@@ -127,11 +127,12 @@
         margin: 1em;
         background: #74DBFF;
         border-radius: 1em;
-        font-size: 2em;
+        font-size: 1.5em;
         cursor: pointer;
         border: none;
         font-family: "Cutive Mono";
         color: white;
+        margin: 1em;
 
       }
     }

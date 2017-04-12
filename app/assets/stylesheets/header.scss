@@ -30,7 +30,7 @@ nav ul {
   padding:0;
   margin:0;
   list-style:none;
-  background:#222;opacity: .7;
+  background:rgba(0, 0, 0, 0);
   overflow:hidden;
 }
 
@@ -39,7 +39,7 @@ nav li {
 }
 
 nav a {
-  color:#fff;
+  color:#FEAB54;
   font-size: 1.5em;
   font-weight: 100;
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -48,12 +48,11 @@ nav a {
   padding: 12px 15px;
   font-weight: 300;
   letter-spacing: 2px;
-  border-bottom: 1px solid #333;
   font-family: "Cutive Mono";
 
 }
 nav a:hover {
-  background:#111;
+  background:rgba(242, 248, 179, 0.3);
 }
 
 label {
@@ -95,6 +94,11 @@ input[type="checkbox"]:checked ~ section {
 
 .header-wrap {
   position: fixed;
+
+  .menu {
+    max-width: 12%;
+    margin-left: -5em;
+  }
 }
 
 /* Remove margins and padding from the list, and add a black background color */
