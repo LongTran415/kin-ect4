@@ -1,35 +1,36 @@
 .friends-list {
-  background: pink;
-  width: 15%;
+  width: 16%;
   height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
 
-  .players-list {
-    display: flex;
-    flex-direction: column;
-    background: green;
-    flex: 1;
+  h2 {
+    font-family: "Cutive Mono";
   }
-
+// friends list names
   .friends-names {
-    overflow: scroll;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    background: yellow;
-    flex: 2;
+    flex: 1.5;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-wrap: nowrap;
+    text-align: left;
 
     ul {
       list-style-type: none;
       margin: 0;
-      padding: 0;
+      padding: .5em;
+
     }
 
     li {
       font-family: "Cutive Mono";
       font-size: 1.5em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     li:last-child {
@@ -51,10 +52,63 @@
     li a:hover {
       font-size: 1.5em;
       background: #f6f6f6;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+// friends list names
+  .players-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-wrap: nowrap;
+    text-align: left;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: .5em;
+
     }
 
+    li {
+      font-family: "Cutive Mono";
+      font-size: 1.5em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    li:last-child {
+      border: none;
+    }
+
+    li a {
+      text-decoration: none;
+      color: #000;
+      -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+      transition: font-size 0.3s ease, background-color 0.3s ease;
+      display: block;
+      width: 100%;
+    }
+
+    li a:hover {
+      font-size: 1.5em;
+      background: #f6f6f6;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 }
+
 .user-show {
   display: flex;
   flex: 1;
@@ -62,7 +116,7 @@
   align-items: center;
 
   .user-show-top {
-    width: 95%;
+    width: 100%;
     display: flex;
     flex: 1.5;
     flex-direction: column;
@@ -108,7 +162,7 @@
   }
 
   .user-show-btm {
-    width: 87%;
+    width: 97%;
     display: flex;
     align-items: center;
     overflow-x: auto;

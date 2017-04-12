@@ -24,15 +24,21 @@
 		<% end %>
 	<% end %>
 
+	<h2><%= @user.name.capitalize %>'s friends</h2>
 		<div class="friends-names">
-			<h2><%= @user.name.capitalize %>'s friends</h2>
 			<ul>
 				<%= render partial: 'partials/friend', collection: @friends %>
 			</ul>
 		</div>
 
+		<h2>Other Players</h2>
 		<div class="players-list">
-			<h2>Other Players</h2>
-
+			<% for user in @users %>
+				<ul>
+					<li>
+						<%= link_to user.name, user_path(user) %>
+					</li>
+				</ul>
+			<% end %>
 		</div>
 </div>

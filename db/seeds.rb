@@ -5,7 +5,7 @@ Game.destroy_all
 Category.destroy_all
 
 20.times.map do
-  User.create!( :name       => Faker::Internet.user_name,
+  User.create!( :name       => Faker::Name.first_name,
                 :email      => Faker::Internet.email,
                 :password   => 'a' )
 end
