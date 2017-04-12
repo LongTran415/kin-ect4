@@ -1,0 +1,14 @@
+<div class="vote-btns">
+  <!-- <%# if game.votes.where(:upvote => false).pluck(:user_id).include?(current_user.id) %><br> -->
+  <% if !game.votes.pluck(:user_id).include?(current_user.id) %>
+    <%= button_to '+1', upvote_game_path(game), method: :post %>
+  <% end %>
+
+    <%= pluralize(game.votes.where(upvote: true).count - game.votes.where(upvote: false).count, "vote") %>
+
+  <% if !game.votes.pluck(:user_id).include?(current_user.id) %>
+  <%= button_to '-1', downvote_game_path(game), method: :post %>
+  <% end %>
+</div>
+
+</div>

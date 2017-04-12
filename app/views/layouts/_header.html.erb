@@ -1,5 +1,23 @@
-<% if current_user %>
-<%= link_to "Home", games_path %> | <%= link_to "Profile Page", user_path(current_user) %> | <%= link_to "Logout", '/logout' %>
-<% else %>
-<%= link_to "Home", games_path %> | <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
+<div class="wrapper">
+    <input type="checkbox" id="navigation" />
+      <label class="topnav" id="myTopnav" for="navigation">
+        <div class="header-wrap navicon">
+          &#9776;
+        </div>
+      </label>
+    <nav>
+      <% if current_user %>
+        <ul>
+          <li class="nav-link"><%= link_to "Home", games_path %></a></li>
+          <li class="nav-link"><%= link_to "Profile Page", user_path(current_user) %></a></li>
+          <li class="nav-link"><%= link_to "Logout", '/logout' %></a></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li class="nav-link"><%= link_to "Home", games_path %></a></li>
+          <li class="nav-link"><%= link_to 'Login', '/login' %></a></li>
+          <li class="nav-link"><%= link_to 'Signup', '/signup' %></a></li>
+        </ul>
+      <% end %>
+    </nav>
+</div>

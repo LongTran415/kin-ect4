@@ -1,26 +1,10 @@
-<br>
-<div class="container">
-
-
-  <div class="header">
-    <h1>Welcome to Kinect4</h1>
+<div class="game-index">
+  <div class="game-index-top">
+    <h2>Polaroid Images / Cards</h2>
+    <p>The box-shadow property can be used to create paper-like cards:</p>
   </div>
-  <br>
 
-  <ul class='game-list'>
-
-    <!-- <ul> -->
-
-    <%= render partial: 'game', collection: @games %>
-
-
-    <!-- </ul> -->
-
-    <%= form_for "games#search" do |f| %>
-    <select name="category_id">
-      <%= @categories.each do |category| %>
-      <option value="<%= category.id %>"><%= category.name %></option>
-      <% end %>
-      <%= f.submit value: "search"%>
-    </select>
-    <% end %>
+  <div class="game-index-btm">
+    <%= render partial: "partials/game"%>
+  </div>
+</div>
