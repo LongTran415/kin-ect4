@@ -11,7 +11,7 @@ section{
 }
 
 nav {
-  position:fixed;
+  position:absolute;
   top:0;
   left:0;
   width:250px;
@@ -21,6 +21,7 @@ nav {
   -webkit-transition:all 200ms ease-in;
   -o-transition:all 200ms ease-in;
   transition:all 200ms ease-in;
+  z-index: 2;
 }
 
 nav ul {

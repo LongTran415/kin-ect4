@@ -2,7 +2,7 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-image: image("/images/games.");
+
 
   .game-index-top {
     display: flex;
@@ -10,7 +10,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: pink;
+    background-image: url("/images/games.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    h1 {
+      font-family: "Press Start 2P";
+      font-size: 3.5em;
+      color: white;
+      letter-spacing: 1em;
+    }
+    h3 {
+      font-family: "Cutive Mono";
+      font-size: 2em;
+      color: white;
+    }
   }
 
   .game-index-btm {
@@ -18,8 +32,24 @@
     align-items: center;
     overflow-x: auto;
     overflow-y: hidden;
-    background: white;
     padding: 1em;
+        /* IE10+ */
+    background-image: -ms-linear-gradient(top left, #2B2B2B 0%, #606469 100%);
+
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(top left, #2B2B2B 0%, #606469 100%);
+
+    /* Opera */
+    background-image: -o-linear-gradient(top left, #2B2B2B 0%, #606469 100%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #2B2B2B), color-stop(100, #606469));
+
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(top left, #2B2B2B 0%, #606469 100%);
+
+    /* W3C Markup */
+    background-image: linear-gradient(to bottom right, #2B2B2B 0%, #606469 100%);
   }
 
   .box {
@@ -59,6 +89,7 @@
       white-space: nowrap;
       overflow: hidden;
       color: white;
+      font-family: "Cutive Mono";
 
     }
   }
@@ -80,12 +111,13 @@
     .sub-btn {
       input[type="submit"] {
         margin: 1em;
-        background: pink;
+        background: #74DBFF;
         border-radius: 1em;
         font-size: 2em;
         cursor: pointer;
         border: none;
         font-family: "Cutive Mono";
+        color: white;
 
       }
     }
