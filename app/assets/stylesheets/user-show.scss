@@ -135,17 +135,51 @@
     }
 
     @media all and (min-width: 960px) {
-        h1 {
-          font-size: 5vw;
+        h2 {
+          font-size: 4vw;
+        }
+        .speech-2 {
+          max-width: 52%;
+          max-height: 52%;
+          margin-top: 3%;
+
+        }
+        .bub-text {
+          position: absolute;
+          margin-top: 25%;
+          font-family: "Shadows Into Light";
+          margin-left: 7%;
+          font-size: 1.5em;
+          vertical-align: center;
+          text-align: center;
+          transform: rotate(-3deg);
+
         }
       }
 
     @media all and (max-width: 959px) and (min-width: 600px) {
-      h1 {
-        font-size: 5.5vw;
+      h2 {
+        font-size: 4vw;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
+      }
+      .speech-2 {
+        max-width: 40%;
+        max-height: 40%;
+        margin-top: 10%;
+
+      }
+      .bub-text {
+        position: absolute;
+        margin-top: 50%;
+        font-family: "Shadows Into Light";
+        margin-left: 10%;
+        font-size: 1.2em;
+        vertical-align: center;
+        text-align: center;
+        transform: rotate(-3deg);
+
       }
     }
 
@@ -156,6 +190,23 @@
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
+      }
+      .speech-2 {
+        max-width: 52%;
+        max-height: 52%;
+        margin-top: 20%;
+
+      }
+      .bub-text {
+        position: absolute;
+        margin-top: 95%;
+        font-family: "Shadows Into Light";
+        margin-left: 10%;
+        font-size: 1.2em;
+        vertical-align: center;
+        text-align: center;
+        transform: rotate(-3deg);
+
       }
     }
   }
