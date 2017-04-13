@@ -1,15 +1,13 @@
 <div class="user-show">
-
   <div class="user-show-top">
-		<%= image_tag "/images/speech-2.png", class: "speech-2" %>
-		<div class="bub-text">
-			Your subscribed games!
-		</div>
+
 		<% if current_user == @user %>
-		<h2>Welcome <%= @user.name.capitalize %></h2>
 		<% else %>
 		<h2><%= @user.name.capitalize %>'s Profile Page!</h2>
 		<% end %>
+  </div>
+  <div class="users-show-mid">
+    Your game subscriptions
   </div>
   <div class="user-show-btm">
     <%= render partial: "partials/game"%>
@@ -31,19 +29,15 @@
 
 	<h2><%= @user.name.capitalize %>'s friends</h2>
 		<div class="friends-names">
-			<ul>
-				<%= render partial: 'partials/friend', collection: @friends %>
-			</ul>
-		</div>
+      <div class="list-direction">
+        <ul>
+          <%= render partial: 'partials/friend', collection: @friends %>
+        </ul>  
+      </div>
 
-		<h2>Other Players</h2>
-		<div class="players-list">
-			<% for user in @users %>
-				<ul>
-					<li>
-						<%= link_to user.name, user_path(user) %>
-					</li>
-				</ul>
-			<% end %>
+      <div class="players-list">
+        <%= image_tag "/images/woman.png", class: "woman" %>
+        <%= image_tag "/images/word-bub.png", class: "word-bub animated bounceInDown" %>
+      </div>
 		</div>
 </div>

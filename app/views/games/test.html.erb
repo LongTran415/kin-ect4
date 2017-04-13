@@ -1,20 +1,45 @@
-<!-- <h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p> -->
+
+<!-- add players of each game here and restrict view if friend or not showing links -->
 <div class="container">
-	<!--  button to nav back to browse -->
-	<% if current_user == @user %>
-		<%= render 'add_games_button' %>
-	<% end %>
 
 
+<h2>Welcome to <%= @game.title %></h2>
+<img class="large-pic" src=<%= @game.image_url %>>
 
-	<ul>
-		<%= render partial: 'games/game', collection: @games %>
-	</ul>
+<p><b><label>Game Description:</label></b>
+  <%= @game.body %>
+  <p><b><label>Min Players:</label></b>
+  <%= @game.min_players %></p>
+  <p><b><label>Max Players:</label></b>
+  <%= @game.max_players %></p>
+  <p><b><label>Playing Time:</label></b>
+  <%= @game.playing_time %></p>
+</p>
 
-	<h2>Friends!</h2>
-	<ul>
-		<%= render partial: 'partials/friend', collection: @friends %>
-	</ul>
+<b><label>Game Comments:</label></b>
 
+<%= render partial: "shared/errors" %>
+
+<% if @game.comments.length > 0 %>
+<%= render partial: "games/comment", collection: @game.comments %>
+<% end %>
+
+<%= form_for([@game, Comment.new]) do |f| %>
+  <div class="field">
+    <%= f.text_area :body, size: "80x5" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<!-- players partial here -->
+<br>
+
+<h3>
+  Other Players:
+</h3>
+
+<%= render partial: "games/player", collection: @players %>
 </div>
+<br>
