@@ -5,7 +5,7 @@
   align-items: center;
 
   .game-index-top {
-    width: 90%;
+    width: 95%;
     display: flex;
     flex: 1.5;
     flex-direction: column;
@@ -42,12 +42,13 @@
       font-family: "Press Start 2P";
       font-size: 3.5em;
       color: white;
-      letter-spacing: .5em;
+      letter-spacing: .4em;
       padding: 1em;
 
     }
     h3 {
-      font-family: "Cutive Mono";
+      font-family: "Amatic SC";
+      letter-spacing: .3em;
       font-size: 2em;
       color: white;
       padding: 1em;

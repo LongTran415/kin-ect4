@@ -5,7 +5,7 @@
   flex-direction: column;
 
   h2 {
-    font-family: "Cutive Mono";
+    font-family: "Amatic SC";
   }
 // friends list names
   .friends-names {
@@ -25,7 +25,7 @@
     }
 
     li {
-      font-family: "Cutive Mono";
+      font-family: "Amatic SC";
       font-size: 1.5em;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -75,7 +75,7 @@
     }
 
     li {
-      font-family: "Cutive Mono";
+      font-family: "Amatic SC";
       font-size: 1.5em;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -126,10 +126,12 @@
     background-position: center;
 
     h2 {
-      font-family: "Cutive Mono";
+      font-family: "Amatic SC";
+      letter-spacing: .5em;
       font-size: 2em;
       color: orange;
       padding: 1em;
+      margin-top: 10%;
     }
 
     @media all and (min-width: 960px) {
@@ -257,4 +259,17 @@
 .box:hover .overlay {
   bottom: 0;
   height: 50%;
+}
+
+.speech-1 {
+  max-width: 100%;
+  position: absolute;
+  left: 55%;
+}
+.speech-2 {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  left: 10%;
+  top: 30%;
 }

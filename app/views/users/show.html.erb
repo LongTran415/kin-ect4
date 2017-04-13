@@ -1,7 +1,9 @@
 <div class="user-show">
+
   <div class="user-show-top">
+		<%= image_tag "/images/speech-2.png", class: "speech-2" %>
 		<% if current_user == @user %>
-		<h2>Welcome <%= @user.name.capitalize %>, here are your Games!</h2>
+		<h2>Welcome <%= @user.name.capitalize %></h2>
 		<% else %>
 		<h2><%= @user.name.capitalize %>'s Profile Page!</h2>
 		<% end %>
