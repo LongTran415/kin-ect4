@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+<section class="fill-height-or-more">
+    <%= render partial: "partials/title" %>
+    <div class="content">
+      <%= render partial: "partials/project" %>
+    </div>
+</section>
+=======
+<div class="game-index">
+  <div class="game-index-top">
+    <h1>Kin-ect</h1>
+    <h3>&lt;Where <text class="color-1">f</text><text class="color-2">r</text><text class="color-3">i</text><text class="color-4">e</text><text class="color-5">n</text><text class="color-6">d</text><text class="color-7">s</text> come to play&gt;</h3>
+  </div>
+
+  <div class="game-index-btm">
+    <%= render partial: "partials/game"%>
+  </div>
+</div>
+>>>>>>> c8db2d44796aca80eec51523bcb83abf30a2f63f

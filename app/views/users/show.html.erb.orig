@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+<section class="fill-height-or-more">
+  <div class="title">
+    <%= render partial: "partials/users_show" %>
+  </div>
+</section
+=======
+<div class="user-show">
+  <div class="user-show-top">
+		<% if current_user == @user %>
+		<h2>Welcome <%= @user.name.capitalize %>, here are your Games!</h2>
+		<% else %>
+		<h2><%= @user.name.capitalize %>'s Profile Page!</h2>
+		<% end %>
+  </div>
+  <div class="user-show-btm">
+    <%= render partial: "partials/game"%>
+  </div>
+</div>
+
+<div class="friends-list">
+
+	<%if current_user.friends.include?(@user) %>
+	<!-- Unfriend Button -->
+		<%= button_to "Unfriend", { action: "destroy", id: @user.id }, method: :delete, data: { confirm: "Are you sure?" } %>
+		<% else %>
+		<!-- Add Friend Button -->
+		<% if current_user.id == @user.id %>
+		<% else %>
+		<%= button_to "Add Friend", action: "friendship" %>
+		<% end %>
+	<% end %>
+
+	<h2><%= @user.name.capitalize %>'s friends</h2>
+		<div class="friends-names">
+			<ul>
+				<%= render partial: 'partials/friend', collection: @friends %>
+			</ul>
+		</div>
+
+		<h2>Other Players</h2>
+		<div class="players-list">
+			<% for user in @users %>
+				<ul>
+					<li>
+						<%= link_to user.name, user_path(user) %>
+					</li>
+				</ul>
+			<% end %>
+		</div>
+</div>
+>>>>>>> c8db2d44796aca80eec51523bcb83abf30a2f63f

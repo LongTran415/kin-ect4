@@ -1,7 +1,6 @@
 .friends-list {
-  width: 16%;
+  width: 20%;
   height: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
 
@@ -116,23 +115,21 @@
   align-items: center;
 
   .user-show-top {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex: 1.5;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-image: url("/images/games-hands.jpeg");
+    background-image: url("/images/chess.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
 
     h2 {
       font-family: "Cutive Mono";
       font-size: 2em;
-      color: white;
+      color: orange;
       padding: 1em;
-      margin-top: 10%;
     }
 
     @media all and (min-width: 960px) {
@@ -162,7 +159,7 @@
   }
 
   .user-show-btm {
-    width: 97%;
+    width: 80%;
     display: flex;
     align-items: center;
     overflow-x: auto;
