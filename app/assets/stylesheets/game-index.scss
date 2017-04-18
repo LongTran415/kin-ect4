@@ -181,3 +181,25 @@
   bottom: 0;
   height: 50%;
 }
+
+.index-side {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .index-container {
+
+    .man {
+      object-fit: contain;
+      object-position: bottom;
+      max-width: 120%;
+      margin-top: 85%;
+
+    }
+    .word-bub-2{
+      position: absolute;
+      bottom: 30%;
+      left: 26%;
+    }
+  }
+}

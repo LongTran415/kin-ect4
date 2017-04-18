@@ -21,7 +21,7 @@
     .list-direction {
       display: flex;
       flex-direction: column;
-      background: rgba(34,34,34,.7);
+      background: rgba(34,34,34,.5);
       overflow-x: hidden;
       overflow-y: auto;
 
@@ -58,7 +58,7 @@
 
       li a:hover {
         font-size: 1.5em;
-        background: #f6f6f6;
+        background: rgba(34,34,34,.8);
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
