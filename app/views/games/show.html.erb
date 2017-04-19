@@ -19,10 +19,6 @@
       <% if @game.comments.length > 0 %>
       <%= render partial: "games/comment", collection: @game.comments %>
       <% end %>
-      <div class="players-list">
-        <h3>Other Players:</h3>
-        <%= render partial: "games/player", collection: @players %>
-      </div>
     </div>
   </div>
 

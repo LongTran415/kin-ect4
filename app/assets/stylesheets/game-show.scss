@@ -6,13 +6,16 @@
   overflow-y: auto;
   flex-wrap: nowrap;
   text-align: left;
-  color: white;
+  color: black;
   margin-top: .5em;
+  background: #ffffe6;
+
+
+
 
   .list-direction {
     display: flex;
     flex-direction: column;
-    background: rgba(34,34,34,.5);
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -29,7 +32,7 @@
       font-family: "Amatic SC";
       font-size: 1.5em;
       white-space: nowrap;
-      color: white;
+      color: black;
     }
 
     li:last-child {
@@ -39,7 +42,7 @@
     li a {
       margin-left: .5em;
       text-decoration: none;
-      color: pink;
+      color: green;
       -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
       -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
       -o-transition: font-size 0.3s ease, background-color 0.3s ease;
@@ -47,6 +50,9 @@
       transition: font-size 0.3s ease, background-color 0.3s ease;
       display: block;
       width: 100%;
+      font-size: .5em;
+      align-content: center;
+      margin-top: 1em;
     }
 
     li a:hover {
@@ -76,6 +82,7 @@
     background: #ffffcc;
     flex-direction: column;
     font-family: "Cutive Mono";
+
     h4 {
       margin-top: 4em;
     }
@@ -109,6 +116,8 @@
     height: 30%;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-image: url("/images/polkadots.png");
+
     .field {
       margin-top: 1em;
     }
