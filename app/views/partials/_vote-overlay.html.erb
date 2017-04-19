@@ -1,0 +1,19 @@
+<div class="table-items">
+  <table>
+    <tr>
+      <th><%= link_to "Description", sort: "description" %></th>
+      <th><%= link_to "Min. Players", sort: "minplayers" %></th>
+      <th><%= link_to "Max. Players", sort: "maxplayers" %></th>
+      <th><%= link_to "Playing Time", sort: "playingtime" %></th>
+      <th><%= link_to "Category", sort: "category" %></th>
+    </tr>
+
+    <tr>
+      <td><%= @game.body %></td>
+      <td><%= @game.min_players %></td>
+      <td><%= @game.max_players %></td>
+      <td><%= @game.playing_time %></td>
+      <td><%= @game.category.name %></td>
+    </tr>
+  </table>
+</div>

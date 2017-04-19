@@ -1,0 +1,11 @@
+<h4>Game Details:</h4>
+<div class="game-box">
+  <%= link_to image_tag(@game.image_url), game_path(@game) %>
+  <div class="title">
+    <%= @game.title %>
+  </div>
+  <div class="large-overlay">
+    <%= render partial: "partials/vote-overlay" %>
+  </div>
+  
+</div>
