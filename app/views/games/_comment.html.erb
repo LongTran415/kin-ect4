@@ -1,8 +1,20 @@
-<p>
-  <%= comment.body %>
-  <%= button_to '+1', upvote_comment_path(comment), method: :post %>
-  <%= pluralize(comment.votes.where(upvote: true).count - comment.votes.where(upvote: false).count, "vote") %>
-  <%= button_to '-1', downvote_comment_path(comment), method: :post %>
-  <%= link_to 'Edit', edit_comment_path(comment) %>
-  <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
-</p>
+<div class="friends-list">
+
+			<div class="comments">
+        <div class="list-direction">
+          <ul>
+            <li>
+              <%= comment.body %>
+            </li>
+
+            <li>
+              <%= link_to 'Edit', edit_comment_path(comment) %>
+            </li>
+
+            <li>
+              <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </li>
+          </ul>
+        </div>
+		</div>
+</div>

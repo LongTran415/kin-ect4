@@ -1,3 +1,65 @@
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-wrap: nowrap;
+  text-align: left;
+  color: white;
+  margin-top: .5em;
+
+  .list-direction {
+    display: flex;
+    flex-direction: column;
+    background: rgba(34,34,34,.5);
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: .5em;
+      display: flex;
+      flex-direction: row;
+
+    }
+
+    li {
+      font-family: "Amatic SC";
+      font-size: 1.5em;
+      white-space: nowrap;
+      color: white;
+    }
+
+    li:last-child {
+      border: none;
+    }
+
+    li a {
+      margin-left: .5em;
+      text-decoration: none;
+      color: pink;
+      -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+      transition: font-size 0.3s ease, background-color 0.3s ease;
+      display: block;
+      width: 100%;
+    }
+
+    li a:hover {
+      font-size: 1em;
+      background: rgba(34,34,34,.8);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+}
+
 .game-show {
   display: flex;
   flex: 1;
@@ -14,6 +76,9 @@
     background: #ffffcc;
     flex-direction: column;
     font-family: "Cutive Mono";
+    h4 {
+      margin-top: 4em;
+    }
   }
 
 
@@ -35,7 +100,19 @@
       max-height: 100%;
     }
   }
-
+  .game-show-btm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    height: 30%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .field {
+      margin-top: 1em;
+    }
+  }
   .game-box {
     display: flex;
     max-width: 60%;
@@ -43,7 +120,7 @@
     background: rgba(64,64,64,0.6);
     position: relative;
     box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.3), 0 2.5em 6em 0 rgba(0, 0, 0, 0.30);
-    margin-bottom: 6em;
+    margin-bottom: 1em;
     color: #ffffe6;
     font-family: "Cutive Mono";
     font-size: 2em;
